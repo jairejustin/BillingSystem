@@ -206,7 +206,7 @@
         #endregion
 
         private Label lblTitle;
-        private Label lblFullName;
+        private Label lblCustomerName;
         private Label lblAddress;
         private Label lblContact;
         private Label lblEmail;
