@@ -208,7 +208,7 @@
         private Label lblTitle;
         private Label lblFullName;
         private Label lblAddress;
-        private Label lblContact;
+        private Label lblPhoneNo;
         private Label lblEmail;
         private Label lblBalance;
         private ContextMenuStrip contextMenuStrip1;
