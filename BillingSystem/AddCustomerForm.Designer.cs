@@ -198,7 +198,7 @@
             MaximizeBox = false;
             Name = "AddCustomerForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Billing System v1.0 - Add Customer (M.L)";
+            Text = "Billing System v2.0 - Add Customer (MAL)";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -206,7 +206,7 @@
         #endregion
 
         private Label lblTitle;
-        private Label lblFullName;
+        private Label lblCustomerName;
         private Label lblAddress;
         private Label lblContact;
         private Label lblEmail;
