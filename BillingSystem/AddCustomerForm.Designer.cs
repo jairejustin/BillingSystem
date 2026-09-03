@@ -206,9 +206,9 @@
         #endregion
 
         private Label lblTitle;
-        private Label lblFullName;
+        private Label lblName;
         private Label lblAddress;
-        private Label lblPhoneNo;
+        private Label lblContact;
         private Label lblEmail;
         private Label lblBalance;
         private ContextMenuStrip contextMenuStrip1;
