@@ -157,7 +157,7 @@
             btnSearch.UseVisualStyleBackColor = true;
             btnSearch.Click += button1_Click;
             // 
-            // AddCustomerForm
+            // CustomerListForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -169,9 +169,9 @@
             Controls.Add(btnAdd);
             Controls.Add(dgvCustomers);
             Controls.Add(lblTitle);
-            Name = "AddCustomerForm";
+            Name = "CustomerListForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Billing System - Customer List";
+            Text = "Billing Systemv1.0 - Customer List(C.B)";
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).EndInit();
             ResumeLayout(false);
             PerformLayout();
