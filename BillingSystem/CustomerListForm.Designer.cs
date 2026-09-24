@@ -47,8 +47,9 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
+            lblTitle.BackColor = Color.Beige;
             lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(26, 31);
+            lblTitle.Location = new Point(26, 9);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(161, 31);
             lblTitle.TabIndex = 0;
@@ -59,13 +60,14 @@
             dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCustomers.Columns.AddRange(new DataGridViewColumn[] { CustomerID, Fullname, Address, ContactNumber, Email, Balance });
-            dgvCustomers.Location = new Point(26, 92);
+            dgvCustomers.Location = new Point(26, 107);
             dgvCustomers.Name = "dgvCustomers";
             dgvCustomers.ReadOnly = true;
             dgvCustomers.RowHeadersWidth = 51;
             dgvCustomers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCustomers.Size = new Size(727, 274);
             dgvCustomers.TabIndex = 1;
+            dgvCustomers.CellContentClick += dgvCustomers_CellContentClick;
             // 
             // CustomerID
             // 
@@ -111,56 +113,62 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(26, 385);
+            btnAdd.BackColor = Color.YellowGreen;
+            btnAdd.ForeColor = SystemColors.ActiveCaptionText;
+            btnAdd.Location = new Point(26, 400);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(171, 44);
             btnAdd.TabIndex = 2;
             btnAdd.Text = "Add Customer";
-            btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += button1_Click;
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(215, 385);
+            btnDelete.BackColor = Color.YellowGreen;
+            btnDelete.Location = new Point(215, 400);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(94, 44);
             btnDelete.TabIndex = 2;
             btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += button1_Click;
+            btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnLogout
             // 
-            btnLogout.Location = new Point(659, 385);
+            btnLogout.BackColor = Color.YellowGreen;
+            btnLogout.Location = new Point(659, 400);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(94, 44);
             btnLogout.TabIndex = 2;
             btnLogout.Text = "Logout";
-            btnLogout.UseVisualStyleBackColor = true;
-            btnLogout.Click += button1_Click;
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnAdd_Click;
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(354, 38);
+            txtSearch.Location = new Point(143, 60);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(399, 27);
+            txtSearch.Size = new Size(451, 27);
             txtSearch.TabIndex = 3;
             txtSearch.TextChanged += txtSearch_TextChanged;
+            txtSearch.KeyPress += txtSearch_KeyPress;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(237, 31);
+            btnSearch.BackColor = Color.YellowGreen;
+            btnSearch.Location = new Point(26, 53);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(94, 41);
             btnSearch.TabIndex = 2;
             btnSearch.Text = "Search";
-            btnSearch.UseVisualStyleBackColor = true;
-            btnSearch.Click += button1_Click;
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // CustomerListForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Beige;
             ClientSize = new Size(782, 453);
             Controls.Add(txtSearch);
             Controls.Add(btnSearch);
@@ -172,6 +180,7 @@
             Name = "CustomerListForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Billing Systemv1.0 - Customer List(C.B)";
+            Load += CustomerListForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).EndInit();
             ResumeLayout(false);
             PerformLayout();

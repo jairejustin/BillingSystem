@@ -36,7 +36,7 @@
             lblEmail = new Label();
             lblBalance = new Label();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            txtFullname = new TextBox();
+            txtFullName = new TextBox();
             txtAddress = new TextBox();
             txtContact = new TextBox();
             txtEmail = new TextBox();
@@ -112,12 +112,12 @@
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
             // 
-            // txtFullname
+            // txtFullName
             // 
-            txtFullname.Location = new Point(186, 58);
-            txtFullname.Name = "txtFullname";
-            txtFullname.Size = new Size(194, 27);
-            txtFullname.TabIndex = 3;
+            txtFullName.Location = new Point(186, 58);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(194, 27);
+            txtFullName.TabIndex = 3;
             // 
             // txtAddress
             // 
@@ -156,6 +156,7 @@
             btnSave.TabIndex = 4;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnClear
             // 
@@ -187,7 +188,7 @@
             Controls.Add(txtEmail);
             Controls.Add(txtContact);
             Controls.Add(txtAddress);
-            Controls.Add(txtFullname);
+            Controls.Add(txtFullName);
             Controls.Add(lblBalance);
             Controls.Add(lblEmail);
             Controls.Add(lblContact);
@@ -206,13 +207,13 @@
         #endregion
 
         private Label lblTitle;
-        private Label lblCustomerName;
+        private Label lblFullName;
         private Label lblAddress;
         private Label lblContact;
         private Label lblEmail;
         private Label lblBalance;
         private ContextMenuStrip contextMenuStrip1;
-        private TextBox txtFullname;
+        private TextBox txtFullName;
         private TextBox txtAddress;
         private TextBox txtContact;
         private TextBox txtEmail;
