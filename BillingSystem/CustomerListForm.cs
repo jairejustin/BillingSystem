@@ -90,6 +90,9 @@ namespace BillingSystem
                         // Bind the DataTable to the grid
                         dgvCustomers.DataSource = dt;
 
+                        dgvCustomers.ClearSelection();
+                        _selectedCustomerId = 0;
+
                         // Improve column headers for readability
                         if (dgvCustomers.Columns.Count > 0)
                         {
@@ -154,6 +157,10 @@ namespace BillingSystem
                             adapter.Fill(dt);
 
                             dgvCustomers.DataSource = dt;
+
+                            dgvCustomers.ClearSelection();
+                            _selectedCustomerId = 0;
+
                             lblTitle.Text = $"Customer List  ({dt.Rows.Count} result(s))";
                         }
                     }
@@ -166,26 +173,31 @@ namespace BillingSystem
             }
         }
 
-        private void dgvCustomers_SelectionChanged(object sender, EventArgs e)
-        {
-            // If no row is selected (e.g., grid is empty), do nothing
-            if (dgvCustomers.CurrentRow == null) return;
-
-            // Read the CustomerID value from the selected row
-            var idCell = dgvCustomers.CurrentRow.Cells["CustomerID"].Value;
-
-            if (idCell != null && int.TryParse(idCell.ToString(), out int id))
-            {
-                _selectedCustomerId = id;
-            }
-        }
-
         private void dgvCustomers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             // e.RowIndex is -1 when the header row is double-clicked — ignore it
             if (e.RowIndex < 0) return;
 
             OpenEditForm();
+        }
+
+
+        private void dgvCustomers_SelectionChanged(object sender, EventArgs e)
+        {
+            // No row highlighted (e.g., after ClearSelection or Ctrl+click) -> nothing selected
+            if (dgvCustomers.SelectedRows.Count == 0)
+            {
+                _selectedCustomerId = 0;
+                return;
+            }
+
+            // Read the CustomerID value from the selected row
+            var idCell = dgvCustomers.SelectedRows[0].Cells["CustomerID"].Value;
+
+            if (idCell != null && int.TryParse(idCell.ToString(), out int id))
+            {
+                _selectedCustomerId = id;
+            }
         }
 
         private void OpenEditForm()
