@@ -68,6 +68,8 @@
             dgvCustomers.Size = new Size(727, 274);
             dgvCustomers.TabIndex = 1;
             dgvCustomers.CellContentClick += dgvCustomers_CellContentClick;
+            dgvCustomers.CellDoubleClick += dgvCustomers_CellDoubleClick;
+            dgvCustomers.SelectionChanged += dgvCustomers_SelectionChanged;
             // 
             // CustomerID
             // 
