@@ -41,6 +41,7 @@
             btnLogout = new Button();
             txtSearch = new TextBox();
             btnSearch = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
             SuspendLayout();
             // 
@@ -167,12 +168,23 @@
             btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.YellowGreen;
+            button1.Location = new Point(327, 400);
+            button1.Name = "button1";
+            button1.Size = new Size(155, 44);
+            button1.TabIndex = 4;
+            button1.Text = "Delete";
+            button1.UseVisualStyleBackColor = false;
+            // 
             // CustomerListForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(782, 453);
+            Controls.Add(button1);
             Controls.Add(txtSearch);
             Controls.Add(btnSearch);
             Controls.Add(btnLogout);
@@ -204,5 +216,6 @@
         private DataGridViewTextBoxColumn ContactNumber;
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn Balance;
+        private Button button1;
     }
 }
