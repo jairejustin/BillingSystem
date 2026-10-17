@@ -150,36 +150,40 @@
             // 
             // btnSave
             // 
+            btnSave.BackColor = Color.YellowGreen;
             btnSave.Location = new Point(20, 312);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(104, 49);
             btnSave.TabIndex = 4;
             btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // btnClear
             // 
+            btnClear.BackColor = Color.YellowGreen;
             btnClear.Location = new Point(305, 312);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(104, 49);
             btnClear.TabIndex = 4;
             btnClear.Text = "Clear";
-            btnClear.UseVisualStyleBackColor = true;
+            btnClear.UseVisualStyleBackColor = false;
             // 
             // btnBack
             // 
+            btnBack.BackColor = Color.YellowGreen;
             btnBack.Location = new Point(162, 312);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(104, 49);
             btnBack.TabIndex = 4;
             btnBack.Text = "Back";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.UseVisualStyleBackColor = false;
             // 
             // AddCustomerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Beige;
             ClientSize = new Size(432, 373);
             Controls.Add(btnBack);
             Controls.Add(btnClear);
