@@ -86,28 +86,31 @@
             // 
             // btnCancel
             // 
+            btnCancel.BackColor = Color.YellowGreen;
             btnCancel.Location = new Point(198, 188);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(122, 53);
             btnCancel.TabIndex = 5;
             btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
             // btnLogin
             // 
+            btnLogin.BackColor = Color.YellowGreen;
             btnLogin.Location = new Point(47, 188);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(126, 53);
             btnLogin.TabIndex = 6;
             btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Beige;
             ClientSize = new Size(382, 253);
             Controls.Add(btnLogin);
             Controls.Add(btnCancel);
