@@ -52,22 +52,24 @@
             lblTitle.Size = new Size(312, 35);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Analytics Dashboard";
+            lblTitle.Click += lblTitle_Click;
             // 
             // lblTotalCustomers
             // 
             lblTotalCustomers.AutoSize = true;
             lblTotalCustomers.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTotalCustomers.Location = new Point(25, 95);
+            lblTotalCustomers.Location = new Point(15, 60);
             lblTotalCustomers.Name = "lblTotalCustomers";
             lblTotalCustomers.Size = new Size(176, 23);
             lblTotalCustomers.TabIndex = 1;
             lblTotalCustomers.Text = "Total Customers: 0";
+            lblTotalCustomers.Click += lblTotalCustomers_Click;
             // 
             // lblTotalRevenue
             // 
             lblTotalRevenue.AutoSize = true;
             lblTotalRevenue.Font = new Font("Arial", 12F);
-            lblTotalRevenue.Location = new Point(26, 158);
+            lblTotalRevenue.Location = new Point(343, 60);
             lblTotalRevenue.Name = "lblTotalRevenue";
             lblTotalRevenue.Size = new Size(198, 23);
             lblTotalRevenue.TabIndex = 2;
@@ -77,7 +79,7 @@
             // 
             lblTotalUnpaid.AutoSize = true;
             lblTotalUnpaid.Font = new Font("Arial", 12F);
-            lblTotalUnpaid.Location = new Point(26, 220);
+            lblTotalUnpaid.Location = new Point(729, 60);
             lblTotalUnpaid.Name = "lblTotalUnpaid";
             lblTotalUnpaid.Size = new Size(182, 23);
             lblTotalUnpaid.TabIndex = 3;
@@ -87,7 +89,7 @@
             // 
             lblTop5Title.AutoSize = true;
             lblTop5Title.Font = new Font("Arial", 12F);
-            lblTop5Title.Location = new Point(26, 316);
+            lblTop5Title.Location = new Point(12, 358);
             lblTop5Title.Name = "lblTop5Title";
             lblTop5Title.Size = new Size(306, 23);
             lblTop5Title.TabIndex = 4;
@@ -95,26 +97,26 @@
             // 
             // plotMonthlyRevenue
             // 
-            plotMonthlyRevenue.Location = new Point(257, 56);
+            plotMonthlyRevenue.Location = new Point(18, 104);
             plotMonthlyRevenue.Name = "plotMonthlyRevenue";
-            plotMonthlyRevenue.Size = new Size(327, 242);
+            plotMonthlyRevenue.Size = new Size(523, 236);
             plotMonthlyRevenue.TabIndex = 5;
             // 
             // plotPaidUnpaid
             // 
-            plotPaidUnpaid.Location = new Point(608, 56);
+            plotPaidUnpaid.Location = new Point(566, 104);
             plotPaidUnpaid.Name = "plotPaidUnpaid";
-            plotPaidUnpaid.Size = new Size(348, 242);
+            plotPaidUnpaid.Size = new Size(404, 236);
             plotPaidUnpaid.TabIndex = 6;
             // 
             // dgvTop5
             // 
             dgvTop5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvTop5.Columns.AddRange(new DataGridViewColumn[] { FullName, TotalConsumption, TotalBilled });
-            dgvTop5.Location = new Point(26, 349);
+            dgvTop5.Location = new Point(12, 384);
             dgvTop5.Name = "dgvTop5";
             dgvTop5.RowHeadersWidth = 51;
-            dgvTop5.Size = new Size(929, 188);
+            dgvTop5.Size = new Size(958, 158);
             dgvTop5.TabIndex = 7;
             // 
             // FullName
@@ -122,21 +124,21 @@
             FullName.HeaderText = "Name";
             FullName.MinimumWidth = 6;
             FullName.Name = "FullName";
-            FullName.Width = 125;
+            FullName.Width = 302;
             // 
             // TotalConsumption
             // 
             TotalConsumption.HeaderText = "Consumption";
             TotalConsumption.MinimumWidth = 6;
             TotalConsumption.Name = "TotalConsumption";
-            TotalConsumption.Width = 125;
+            TotalConsumption.Width = 301;
             // 
             // TotalBilled
             // 
             TotalBilled.HeaderText = "Total Bill";
             TotalBilled.MinimumWidth = 6;
             TotalBilled.Name = "TotalBilled";
-            TotalBilled.Width = 125;
+            TotalBilled.Width = 302;
             // 
             // btnCloseAnalytics
             // 
@@ -167,7 +169,7 @@
             Name = "frmAnalytics";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Billing System - Analytics Dashboard";
-            WindowState = FormWindowState.Maximized;
+            Load += frmAnalytics_Load;
             ((System.ComponentModel.ISupportInitialize)dgvTop5).EndInit();
             ResumeLayout(false);
             PerformLayout();
