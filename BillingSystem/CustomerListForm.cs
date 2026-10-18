@@ -1,4 +1,5 @@
 ﻿using BillingSystem.Database;
+using BillingSystem.Utils;
 using ClosedXML.Excel;
 using MySql.Data.MySqlClient;
 using PdfSharp;
@@ -361,7 +362,9 @@ namespace BillingSystem
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-
+            AuditLogger.Log("LOGOUT",
+            $"{AppSession.CurrentFullName} ({AppSession.CurrentRole}) logged out.");
+            AppSession.Clear();
         }
 
         private void btnExportPdf_Click(object sender, EventArgs e)
