@@ -41,7 +41,9 @@
             btnLogout = new Button();
             txtSearch = new TextBox();
             btnSearch = new Button();
-            button1 = new Button();
+            btnAnalytics = new Button();
+            btnExportExcel = new Button();
+            btnExportPdf = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
             SuspendLayout();
             // 
@@ -129,7 +131,7 @@
             // btnDelete
             // 
             btnDelete.BackColor = Color.YellowGreen;
-            btnDelete.Location = new Point(215, 400);
+            btnDelete.Location = new Point(203, 400);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(94, 44);
             btnDelete.TabIndex = 2;
@@ -146,13 +148,13 @@
             btnLogout.TabIndex = 2;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += btnAdd_Click;
+            btnLogout.Click += btnLogout_Click;
             // 
             // txtSearch
             // 
             txtSearch.Location = new Point(143, 60);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(451, 27);
+            txtSearch.Size = new Size(369, 27);
             txtSearch.TabIndex = 3;
             txtSearch.TextChanged += txtSearch_TextChanged;
             txtSearch.KeyPress += txtSearch_KeyPress;
@@ -168,15 +170,38 @@
             btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
             // 
-            // button1
+            // btnAnalytics
             // 
-            button1.BackColor = Color.YellowGreen;
-            button1.Location = new Point(327, 400);
-            button1.Name = "button1";
-            button1.Size = new Size(155, 44);
-            button1.TabIndex = 4;
-            button1.Text = "Delete";
-            button1.UseVisualStyleBackColor = false;
+            btnAnalytics.BackColor = Color.YellowGreen;
+            btnAnalytics.Location = new Point(598, 53);
+            btnAnalytics.Name = "btnAnalytics";
+            btnAnalytics.Size = new Size(155, 44);
+            btnAnalytics.TabIndex = 4;
+            btnAnalytics.Text = "Analytics";
+            btnAnalytics.UseVisualStyleBackColor = false;
+            btnAnalytics.Click += btnAnalytics_Click;
+            // 
+            // btnExportExcel
+            // 
+            btnExportExcel.BackColor = Color.YellowGreen;
+            btnExportExcel.Location = new Point(303, 400);
+            btnExportExcel.Name = "btnExportExcel";
+            btnExportExcel.Size = new Size(136, 44);
+            btnExportExcel.TabIndex = 5;
+            btnExportExcel.Text = "Export to Excel";
+            btnExportExcel.UseVisualStyleBackColor = false;
+            btnExportExcel.Click += btnExportExcel_Click;
+            // 
+            // btnExportPdf
+            // 
+            btnExportPdf.BackColor = Color.YellowGreen;
+            btnExportPdf.Location = new Point(445, 400);
+            btnExportPdf.Name = "btnExportPdf";
+            btnExportPdf.Size = new Size(126, 44);
+            btnExportPdf.TabIndex = 6;
+            btnExportPdf.Text = "Export to PDF";
+            btnExportPdf.UseVisualStyleBackColor = false;
+            btnExportPdf.Click += btnExportPdf_Click;
             // 
             // CustomerListForm
             // 
@@ -184,7 +209,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(782, 453);
-            Controls.Add(button1);
+            Controls.Add(btnExportPdf);
+            Controls.Add(btnExportExcel);
+            Controls.Add(btnAnalytics);
             Controls.Add(txtSearch);
             Controls.Add(btnSearch);
             Controls.Add(btnLogout);
@@ -216,6 +243,8 @@
         private DataGridViewTextBoxColumn ContactNumber;
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn Balance;
-        private Button button1;
+        private Button btnAnalytics;
+        private Button btnExportExcel;
+        private Button btnExportPdf;
     }
 }
