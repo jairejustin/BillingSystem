@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using BillingSystem.Database;
+using BillingSystem.Utils;
 
 namespace BillingSystem
 {
@@ -200,6 +201,9 @@ namespace BillingSystem
 
                         if (rowsAffected > 0)
                         {
+                            AuditLogger.Log("EDIT_CUSTOMER",
+                            $"Customer ID {_editCustomerId} updated by {AppSession.CurrentUsername}.");
+
                             MessageBox.Show("Customer updated successfully.",
                                 "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -253,6 +257,9 @@ namespace BillingSystem
 
                         if (rowsAffected > 0)
                         {
+                            AuditLogger.Log("ADD_CUSTOMER",
+                            $"New customer '{txtFullName.Text.Trim()}' added by {AppSession.CurrentUsername}.");
+
                             MessageBox.Show("Customer saved successfully.",
                                 "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
