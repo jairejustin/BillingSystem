@@ -52,6 +52,7 @@
             lblStatusSep = new ToolStripStatusLabel();
             lblStatusTime = new ToolStripStatusLabel();
             statusTimer = new System.Windows.Forms.Timer(components);
+            btnChangePassword = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).BeginInit();
             StatusStrip1.SuspendLayout();
             SuspendLayout();
@@ -270,12 +271,24 @@
             statusTimer.Interval = 1000;
             statusTimer.Tick += statusTimer_Tick;
             // 
+            // btnChangePassword
+            // 
+            btnChangePassword.BackColor = Color.YellowGreen;
+            btnChangePassword.Location = new Point(752, 253);
+            btnChangePassword.Name = "btnChangePassword";
+            btnChangePassword.Size = new Size(126, 61);
+            btnChangePassword.TabIndex = 10;
+            btnChangePassword.Text = "Change Password";
+            btnChangePassword.UseVisualStyleBackColor = false;
+            btnChangePassword.Click += btnChangePassword_Click;
+            // 
             // CustomerListForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(903, 485);
+            Controls.Add(btnChangePassword);
             Controls.Add(StatusStrip1);
             Controls.Add(btnManagePermissions);
             Controls.Add(btnAuditLog);
@@ -325,5 +338,6 @@
         private ToolStripStatusLabel lblStatusSep;
         private ToolStripStatusLabel lblStatusTime;
         private System.Windows.Forms.Timer statusTimer;
+        private Button btnChangePassword;
     }
 }

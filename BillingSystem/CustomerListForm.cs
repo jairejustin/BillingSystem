@@ -628,6 +628,10 @@ namespace BillingSystem
             }
         }
 
-
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            frmChangePassword changeForm = new frmChangePassword();
+            changeForm.ShowDialog(this);
+        }
     }
 }
