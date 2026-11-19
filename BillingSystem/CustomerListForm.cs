@@ -633,5 +633,30 @@ namespace BillingSystem
             frmChangePassword changeForm = new frmChangePassword();
             changeForm.ShowDialog(this);
         }
+
+        private void btnViewBilling_Click(object sender, EventArgs e)
+        {
+            // Popup 1: no customer row selected
+            if (dgvCustomers.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select a customer first, then click View Billing.",
+                    "No Customer Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Read the CustomerID from the highlighted row
+            object? idValue = dgvCustomers.SelectedRows[0].Cells["CustomerID"].Value;
+
+            if (idValue == null || !int.TryParse(idValue.ToString(), out int customerId))
+            {
+                MessageBox.Show("The selected row does not have a valid customer ID.",
+                    "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Open the history form and pass ONLY the ID
+            frmBillingHistory historyForm = new frmBillingHistory(customerId);
+            historyForm.ShowDialog(this);
+        }
     }
 }
