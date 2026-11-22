@@ -99,7 +99,7 @@ namespace BillingSystem
                         // Popup 2: this customer has no billing records
                         if (dt.Rows.Count == 0)
                         {
-                            MessageBox.Show("No billing records were found for this customer.",
+                            MessageBox.Show("No billing records found for this customer.",
                                 "No Records Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }

@@ -46,6 +46,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(110, 9);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(205, 28);
@@ -56,6 +57,7 @@
             // 
             lblRole.AutoSize = true;
             lblRole.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            lblRole.ForeColor = Color.White;
             lblRole.Location = new Point(21, 64);
             lblRole.Name = "lblRole";
             lblRole.Size = new Size(98, 23);
@@ -76,6 +78,7 @@
             // 
             chkAddCustomer.AutoSize = true;
             chkAddCustomer.Font = new Font("Segoe UI", 10.2F);
+            chkAddCustomer.ForeColor = Color.White;
             chkAddCustomer.Location = new Point(71, 110);
             chkAddCustomer.Name = "chkAddCustomer";
             chkAddCustomer.Size = new Size(142, 27);
@@ -87,6 +90,7 @@
             // 
             chkEditCustomer.AutoSize = true;
             chkEditCustomer.Font = new Font("Segoe UI", 10.2F);
+            chkEditCustomer.ForeColor = Color.White;
             chkEditCustomer.Location = new Point(71, 140);
             chkEditCustomer.Name = "chkEditCustomer";
             chkEditCustomer.Size = new Size(140, 27);
@@ -98,6 +102,7 @@
             // 
             chkDeleteCustomer.AutoSize = true;
             chkDeleteCustomer.Font = new Font("Segoe UI", 10.2F);
+            chkDeleteCustomer.ForeColor = Color.White;
             chkDeleteCustomer.Location = new Point(71, 170);
             chkDeleteCustomer.Name = "chkDeleteCustomer";
             chkDeleteCustomer.Size = new Size(160, 27);
@@ -109,6 +114,7 @@
             // 
             chkAnalytics.AutoSize = true;
             chkAnalytics.Font = new Font("Segoe UI", 10.2F);
+            chkAnalytics.ForeColor = Color.White;
             chkAnalytics.Location = new Point(71, 200);
             chkAnalytics.Name = "chkAnalytics";
             chkAnalytics.Size = new Size(99, 27);
@@ -120,6 +126,7 @@
             // 
             chkExportExcel.AutoSize = true;
             chkExportExcel.Font = new Font("Segoe UI", 10.2F);
+            chkExportExcel.ForeColor = Color.White;
             chkExportExcel.Location = new Point(71, 230);
             chkExportExcel.Name = "chkExportExcel";
             chkExportExcel.Size = new Size(145, 27);
@@ -131,6 +138,7 @@
             // 
             chkExportPdf.AutoSize = true;
             chkExportPdf.Font = new Font("Segoe UI", 10.2F);
+            chkExportPdf.ForeColor = Color.White;
             chkExportPdf.Location = new Point(71, 260);
             chkExportPdf.Name = "chkExportPdf";
             chkExportPdf.Size = new Size(137, 27);
@@ -142,6 +150,7 @@
             // 
             chkAuditLogs.AutoSize = true;
             chkAuditLogs.Font = new Font("Segoe UI", 10.2F);
+            chkAuditLogs.ForeColor = Color.White;
             chkAuditLogs.Location = new Point(71, 290);
             chkAuditLogs.Name = "chkAuditLogs";
             chkAuditLogs.Size = new Size(113, 27);
@@ -151,7 +160,7 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.YellowGreen;
+            button1.BackColor = Color.FromArgb(189, 215, 238);
             button1.Location = new Point(71, 342);
             button1.Name = "button1";
             button1.Size = new Size(149, 41);
@@ -162,7 +171,7 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.YellowGreen;
+            button2.BackColor = Color.FromArgb(189, 215, 238);
             button2.Location = new Point(240, 342);
             button2.Name = "button2";
             button2.Size = new Size(93, 41);
@@ -175,7 +184,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Beige;
+            BackColor = Color.FromArgb(31, 78, 121);
             ClientSize = new Size(432, 413);
             Controls.Add(button2);
             Controls.Add(button1);

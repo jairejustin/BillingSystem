@@ -555,21 +555,20 @@ namespace BillingSystem
         // Call this inside CustomerListForm_Load after ApplyPermissions()
         private void InitStatusStrip()
         {
-            lblStatusUser.Text =
-                $"User: {AppSession.CurrentFullName}  |  Role: {AppSession.CurrentRole}";
+            lblStatusUser.Text = $"User: {AppSession.CurrentFullName}  |  Role: {AppSession.CurrentRole}";
             UpdateClock();
         }
 
         private void UpdateClock()
         {
-            lblStatusTime.Text = DateTime.Now.ToString("dddd, MMMM dd yyyy   hh:mm:ss tt");
+            lblStatusTime.Text = DateTime.Now.ToString("dddd, MMMM dd yyyy hh:mm:ss tt");
         }
-
+        
         private void statusTimer_Tick(object sender, EventArgs e)
         {
             UpdateClock();
         }
-
+        
 
 
         private void ApplyTheme()
@@ -657,6 +656,16 @@ namespace BillingSystem
             // Open the history form and pass ONLY the ID
             frmBillingHistory historyForm = new frmBillingHistory(customerId);
             historyForm.ShowDialog(this);
+        }
+
+        private void lblStatusUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StatusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
