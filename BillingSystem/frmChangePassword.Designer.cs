@@ -43,6 +43,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 11F);
+            lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(119, 9);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(161, 25);
@@ -53,7 +54,8 @@
             // 
             lblCurrent.AutoSize = true;
             lblCurrent.Font = new Font("Segoe UI", 10F);
-            lblCurrent.Location = new Point(12, 80);
+            lblCurrent.ForeColor = Color.White;
+            lblCurrent.Location = new Point(22, 68);
             lblCurrent.Name = "lblCurrent";
             lblCurrent.Size = new Size(147, 23);
             lblCurrent.TabIndex = 1;
@@ -63,7 +65,8 @@
             // 
             lblNew.AutoSize = true;
             lblNew.Font = new Font("Segoe UI", 10F);
-            lblNew.Location = new Point(30, 146);
+            lblNew.ForeColor = Color.White;
+            lblNew.Location = new Point(40, 134);
             lblNew.Name = "lblNew";
             lblNew.Size = new Size(123, 23);
             lblNew.TabIndex = 2;
@@ -73,7 +76,8 @@
             // 
             lblRetype.AutoSize = true;
             lblRetype.Font = new Font("Segoe UI", 10F);
-            lblRetype.Location = new Point(12, 183);
+            lblRetype.ForeColor = Color.White;
+            lblRetype.Location = new Point(22, 171);
             lblRetype.Name = "lblRetype";
             lblRetype.Size = new Size(141, 23);
             lblRetype.TabIndex = 3;
@@ -81,46 +85,48 @@
             // 
             // txtCurrentPassword
             // 
-            txtCurrentPassword.Location = new Point(175, 79);
+            txtCurrentPassword.Location = new Point(185, 67);
             txtCurrentPassword.Name = "txtCurrentPassword";
-            txtCurrentPassword.Size = new Size(125, 27);
+            txtCurrentPassword.Size = new Size(157, 27);
             txtCurrentPassword.TabIndex = 4;
             txtCurrentPassword.UseSystemPasswordChar = true;
             // 
             // txtNewPassword
             // 
-            txtNewPassword.Location = new Point(175, 142);
+            txtNewPassword.Location = new Point(185, 130);
             txtNewPassword.Name = "txtNewPassword";
-            txtNewPassword.Size = new Size(125, 27);
+            txtNewPassword.Size = new Size(157, 27);
             txtNewPassword.TabIndex = 5;
             txtNewPassword.UseSystemPasswordChar = true;
             // 
             // txtRetypePassword
             // 
-            txtRetypePassword.Location = new Point(175, 182);
+            txtRetypePassword.Location = new Point(185, 170);
             txtRetypePassword.Name = "txtRetypePassword";
-            txtRetypePassword.Size = new Size(125, 27);
+            txtRetypePassword.Size = new Size(157, 27);
             txtRetypePassword.TabIndex = 6;
             txtRetypePassword.UseSystemPasswordChar = true;
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(106, 230);
+            btnSave.BackColor = Color.FromArgb(189, 215, 238);
+            btnSave.Location = new Point(100, 226);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(94, 29);
+            btnSave.Size = new Size(94, 45);
             btnSave.TabIndex = 7;
             btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(218, 230);
+            btnCancel.BackColor = Color.FromArgb(189, 215, 238);
+            btnCancel.Location = new Point(216, 226);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(94, 29);
+            btnCancel.Size = new Size(94, 45);
             btnCancel.TabIndex = 8;
             btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
             // frmChangePassword
@@ -128,6 +134,7 @@
             AcceptButton = btnSave;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(31, 78, 121);
             CancelButton = btnCancel;
             ClientSize = new Size(402, 283);
             Controls.Add(btnCancel);

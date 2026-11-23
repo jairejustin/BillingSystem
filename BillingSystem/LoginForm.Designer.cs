@@ -41,6 +41,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(11, 23);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(194, 31);
@@ -52,6 +53,7 @@
             // 
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Segoe UI", 10.8F);
+            lblUsername.ForeColor = Color.White;
             lblUsername.Location = new Point(22, 77);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(95, 25);
@@ -78,6 +80,7 @@
             // 
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Segoe UI", 10.8F);
+            lblPassword.ForeColor = Color.White;
             lblPassword.Location = new Point(26, 122);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(91, 25);
@@ -86,7 +89,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.BackColor = Color.YellowGreen;
+            btnCancel.BackColor = Color.FromArgb(189, 215, 238);
             btnCancel.Location = new Point(198, 188);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(122, 53);
@@ -97,7 +100,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = Color.YellowGreen;
+            btnLogin.BackColor = Color.FromArgb(189, 215, 238);
             btnLogin.Location = new Point(47, 188);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(126, 53);
@@ -110,7 +113,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Beige;
+            BackColor = Color.FromArgb(31, 78, 121);
             ClientSize = new Size(382, 253);
             Controls.Add(btnLogin);
             Controls.Add(btnCancel);

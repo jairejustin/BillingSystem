@@ -43,6 +43,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(12, 9);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(205, 31);
@@ -53,6 +54,7 @@
             // 
             lblFrom.AutoSize = true;
             lblFrom.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFrom.ForeColor = Color.White;
             lblFrom.Location = new Point(55, 87);
             lblFrom.Name = "lblFrom";
             lblFrom.Size = new Size(54, 23);
@@ -63,6 +65,7 @@
             // 
             lblTo.AutoSize = true;
             lblTo.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTo.ForeColor = Color.White;
             lblTo.Location = new Point(396, 87);
             lblTo.Name = "lblTo";
             lblTo.Size = new Size(31, 23);
@@ -85,7 +88,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.BackColor = Color.YellowGreen;
+            btnSearch.BackColor = Color.FromArgb(189, 215, 238);
             btnSearch.Location = new Point(700, 77);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(105, 45);
@@ -96,7 +99,7 @@
             // 
             // btnClose
             // 
-            btnClose.BackColor = Color.YellowGreen;
+            btnClose.BackColor = Color.FromArgb(189, 215, 238);
             btnClose.Location = new Point(753, 437);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(105, 45);
@@ -118,7 +121,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Beige;
+            BackColor = Color.FromArgb(31, 78, 121);
             ClientSize = new Size(882, 503);
             Controls.Add(dgvAuditLogs);
             Controls.Add(btnClose);

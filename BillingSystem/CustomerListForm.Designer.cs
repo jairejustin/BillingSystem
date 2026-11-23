@@ -61,8 +61,9 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.BackColor = Color.Beige;
+            lblTitle.BackColor = Color.FromArgb(31, 78, 121);
             lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(26, 9);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(161, 31);
@@ -130,7 +131,7 @@
             // 
             // btnAdd
             // 
-            btnAdd.BackColor = Color.YellowGreen;
+            btnAdd.BackColor = Color.FromArgb(189, 215, 238);
             btnAdd.ForeColor = SystemColors.ActiveCaptionText;
             btnAdd.Location = new Point(26, 411);
             btnAdd.Name = "btnAdd";
@@ -142,7 +143,7 @@
             // 
             // btnDelete
             // 
-            btnDelete.BackColor = Color.YellowGreen;
+            btnDelete.BackColor = Color.FromArgb(189, 215, 238);
             btnDelete.Location = new Point(203, 411);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(126, 44);
@@ -153,7 +154,7 @@
             // 
             // btnLogout
             // 
-            btnLogout.BackColor = Color.YellowGreen;
+            btnLogout.BackColor = Color.FromArgb(189, 215, 238);
             btnLogout.Location = new Point(784, 411);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(94, 44);
@@ -173,7 +174,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.BackColor = Color.YellowGreen;
+            btnSearch.BackColor = Color.FromArgb(189, 215, 238);
             btnSearch.Location = new Point(26, 53);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(94, 41);
@@ -184,7 +185,7 @@
             // 
             // btnAnalytics
             // 
-            btnAnalytics.BackColor = Color.YellowGreen;
+            btnAnalytics.BackColor = Color.FromArgb(189, 215, 238);
             btnAnalytics.Location = new Point(752, 53);
             btnAnalytics.Name = "btnAnalytics";
             btnAnalytics.Size = new Size(126, 44);
@@ -195,7 +196,7 @@
             // 
             // btnExportExcel
             // 
-            btnExportExcel.BackColor = Color.YellowGreen;
+            btnExportExcel.BackColor = Color.FromArgb(189, 215, 238);
             btnExportExcel.Location = new Point(752, 153);
             btnExportExcel.Name = "btnExportExcel";
             btnExportExcel.Size = new Size(126, 44);
@@ -206,7 +207,7 @@
             // 
             // btnExportPdf
             // 
-            btnExportPdf.BackColor = Color.YellowGreen;
+            btnExportPdf.BackColor = Color.FromArgb(189, 215, 238);
             btnExportPdf.Location = new Point(752, 103);
             btnExportPdf.Name = "btnExportPdf";
             btnExportPdf.Size = new Size(126, 44);
@@ -217,7 +218,7 @@
             // 
             // btnAuditLog
             // 
-            btnAuditLog.BackColor = Color.YellowGreen;
+            btnAuditLog.BackColor = Color.FromArgb(189, 215, 238);
             btnAuditLog.Location = new Point(505, 411);
             btnAuditLog.Name = "btnAuditLog";
             btnAuditLog.Size = new Size(126, 44);
@@ -228,7 +229,7 @@
             // 
             // btnManagePermissions
             // 
-            btnManagePermissions.BackColor = Color.YellowGreen;
+            btnManagePermissions.BackColor = Color.FromArgb(189, 215, 238);
             btnManagePermissions.Location = new Point(335, 411);
             btnManagePermissions.Name = "btnManagePermissions";
             btnManagePermissions.Size = new Size(164, 44);
@@ -241,11 +242,13 @@
             // 
             StatusStrip1.ImageScalingSize = new Size(20, 20);
             StatusStrip1.Items.AddRange(new ToolStripItem[] { lblStatusUser, lblStatusSep, lblStatusTime });
-            StatusStrip1.Location = new Point(0, 459);
+            StatusStrip1.Location = new Point(0, 464);
             StatusStrip1.Name = "StatusStrip1";
-            StatusStrip1.Size = new Size(903, 26);
+            StatusStrip1.Size = new Size(892, 26);
+            StatusStrip1.SizingGrip = false;
             StatusStrip1.TabIndex = 9;
             StatusStrip1.Text = "statusStrip1";
+            StatusStrip1.ItemClicked += StatusStrip1_ItemClicked;
             // 
             // lblStatusUser
             // 
@@ -256,15 +259,16 @@
             // lblStatusSep
             // 
             lblStatusSep.Name = "lblStatusSep";
-            lblStatusSep.Size = new Size(586, 20);
+            lblStatusSep.Size = new Size(396, 20);
             lblStatusSep.Spring = true;
-            lblStatusSep.Text = "toolStripStatusLabel2";
             // 
             // lblStatusTime
             // 
+            lblStatusTime.AutoSize = false;
             lblStatusTime.Name = "lblStatusTime";
-            lblStatusTime.Size = new Size(151, 20);
+            lblStatusTime.Size = new Size(330, 20);
             lblStatusTime.Text = "toolStripStatusLabel3";
+            lblStatusTime.TextAlign = ContentAlignment.MiddleRight;
             // 
             // statusTimer
             // 
@@ -274,7 +278,7 @@
             // 
             // btnChangePassword
             // 
-            btnChangePassword.BackColor = Color.YellowGreen;
+            btnChangePassword.BackColor = Color.FromArgb(189, 215, 238);
             btnChangePassword.Location = new Point(752, 253);
             btnChangePassword.Name = "btnChangePassword";
             btnChangePassword.Size = new Size(126, 61);
@@ -285,7 +289,7 @@
             // 
             // btnViewBilling
             // 
-            btnViewBilling.BackColor = Color.YellowGreen;
+            btnViewBilling.BackColor = Color.FromArgb(189, 215, 238);
             btnViewBilling.Location = new Point(752, 320);
             btnViewBilling.Name = "btnViewBilling";
             btnViewBilling.Size = new Size(126, 44);
@@ -298,11 +302,11 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Beige;
-            ClientSize = new Size(903, 485);
+            BackColor = Color.FromArgb(31, 78, 121);
+            ClientSize = new Size(892, 490);
+            Controls.Add(StatusStrip1);
             Controls.Add(btnViewBilling);
             Controls.Add(btnChangePassword);
-            Controls.Add(StatusStrip1);
             Controls.Add(btnManagePermissions);
             Controls.Add(btnAuditLog);
             Controls.Add(btnExportPdf);
@@ -348,10 +352,10 @@
         private Button btnManagePermissions;
         private StatusStrip StatusStrip1;
         private ToolStripStatusLabel lblStatusUser;
-        private ToolStripStatusLabel lblStatusSep;
         private ToolStripStatusLabel lblStatusTime;
         private System.Windows.Forms.Timer statusTimer;
         private Button btnChangePassword;
         private Button btnViewBilling;
+        private ToolStripStatusLabel lblStatusSep;
     }
 }

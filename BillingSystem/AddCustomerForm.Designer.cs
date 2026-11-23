@@ -50,6 +50,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(119, 9);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(195, 28);
@@ -60,6 +61,7 @@
             // 
             lblFullName.AutoSize = true;
             lblFullName.Font = new Font("Segoe UI", 10F);
+            lblFullName.ForeColor = Color.White;
             lblFullName.Location = new Point(48, 58);
             lblFullName.Name = "lblFullName";
             lblFullName.Size = new Size(88, 23);
@@ -70,6 +72,7 @@
             // 
             lblAddress.AutoSize = true;
             lblAddress.Font = new Font("Segoe UI", 10F);
+            lblAddress.ForeColor = Color.White;
             lblAddress.Location = new Point(48, 103);
             lblAddress.Name = "lblAddress";
             lblAddress.Size = new Size(74, 23);
@@ -80,6 +83,7 @@
             // 
             lblContact.AutoSize = true;
             lblContact.Font = new Font("Segoe UI", 10F);
+            lblContact.ForeColor = Color.White;
             lblContact.Location = new Point(48, 150);
             lblContact.Name = "lblContact";
             lblContact.Size = new Size(106, 23);
@@ -90,6 +94,7 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI", 10F);
+            lblEmail.ForeColor = Color.White;
             lblEmail.Location = new Point(48, 199);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(55, 23);
@@ -100,6 +105,7 @@
             // 
             lblBalance.AutoSize = true;
             lblBalance.Font = new Font("Segoe UI", 10F);
+            lblBalance.ForeColor = Color.White;
             lblBalance.Location = new Point(48, 242);
             lblBalance.Name = "lblBalance";
             lblBalance.Size = new Size(73, 23);
@@ -150,7 +156,7 @@
             // 
             // btnSave
             // 
-            btnSave.BackColor = Color.YellowGreen;
+            btnSave.BackColor = Color.FromArgb(189, 215, 238);
             btnSave.Location = new Point(20, 312);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(104, 49);
@@ -161,7 +167,7 @@
             // 
             // btnClear
             // 
-            btnClear.BackColor = Color.YellowGreen;
+            btnClear.BackColor = Color.FromArgb(189, 215, 238);
             btnClear.Location = new Point(305, 312);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(104, 49);
@@ -171,7 +177,7 @@
             // 
             // btnBack
             // 
-            btnBack.BackColor = Color.YellowGreen;
+            btnBack.BackColor = Color.FromArgb(189, 215, 238);
             btnBack.Location = new Point(162, 312);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(104, 49);
@@ -183,7 +189,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Beige;
+            BackColor = Color.FromArgb(31, 78, 121);
             ClientSize = new Size(432, 373);
             Controls.Add(btnBack);
             Controls.Add(btnClear);

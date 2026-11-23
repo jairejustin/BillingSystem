@@ -38,6 +38,7 @@
             // 
             lblCustomerName.AutoSize = true;
             lblCustomerName.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCustomerName.ForeColor = Color.White;
             lblCustomerName.Location = new Point(215, 9);
             lblCustomerName.Name = "lblCustomerName";
             lblCustomerName.Size = new Size(171, 31);
@@ -61,7 +62,7 @@
             // 
             // btnClose
             // 
-            btnClose.BackColor = Color.YellowGreen;
+            btnClose.BackColor = Color.FromArgb(189, 215, 238);
             btnClose.Location = new Point(663, 347);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(94, 44);
@@ -74,7 +75,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Beige;
+            BackColor = Color.FromArgb(31, 78, 121);
             ClientSize = new Size(782, 403);
             Controls.Add(btnClose);
             Controls.Add(dgvBilling);

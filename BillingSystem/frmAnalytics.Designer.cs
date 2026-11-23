@@ -47,6 +47,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(346, 9);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(312, 35);
@@ -58,6 +59,7 @@
             // 
             lblTotalCustomers.AutoSize = true;
             lblTotalCustomers.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotalCustomers.ForeColor = Color.White;
             lblTotalCustomers.Location = new Point(15, 60);
             lblTotalCustomers.Name = "lblTotalCustomers";
             lblTotalCustomers.Size = new Size(176, 23);
@@ -69,6 +71,7 @@
             // 
             lblTotalRevenue.AutoSize = true;
             lblTotalRevenue.Font = new Font("Arial", 12F);
+            lblTotalRevenue.ForeColor = Color.White;
             lblTotalRevenue.Location = new Point(343, 60);
             lblTotalRevenue.Name = "lblTotalRevenue";
             lblTotalRevenue.Size = new Size(198, 23);
@@ -79,6 +82,7 @@
             // 
             lblTotalUnpaid.AutoSize = true;
             lblTotalUnpaid.Font = new Font("Arial", 12F);
+            lblTotalUnpaid.ForeColor = Color.White;
             lblTotalUnpaid.Location = new Point(729, 60);
             lblTotalUnpaid.Name = "lblTotalUnpaid";
             lblTotalUnpaid.Size = new Size(182, 23);
@@ -89,6 +93,7 @@
             // 
             lblTop5Title.AutoSize = true;
             lblTop5Title.Font = new Font("Arial", 12F);
+            lblTop5Title.ForeColor = Color.White;
             lblTop5Title.Location = new Point(12, 358);
             lblTop5Title.Name = "lblTop5Title";
             lblTop5Title.Size = new Size(306, 23);
@@ -142,7 +147,7 @@
             // 
             // btnCloseAnalytics
             // 
-            btnCloseAnalytics.BackColor = Color.YellowGreen;
+            btnCloseAnalytics.BackColor = Color.FromArgb(189, 215, 238);
             btnCloseAnalytics.Location = new Point(846, 548);
             btnCloseAnalytics.Name = "btnCloseAnalytics";
             btnCloseAnalytics.Size = new Size(109, 43);
@@ -155,7 +160,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Beige;
+            BackColor = Color.FromArgb(31, 78, 121);
             ClientSize = new Size(982, 603);
             Controls.Add(btnCloseAnalytics);
             Controls.Add(dgvTop5);
